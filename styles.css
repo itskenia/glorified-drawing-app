@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+
+:root {}
+
+body {
+	background: linear-gradient(45deg, #2F5755, #54C6BE, #F7B15C, #F65C51, #E5243F);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+canvas {
+    box-shadow: -3px 2px 9px 6px black;
+    cursor: pointer;position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.tools{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.tools .color-field {
+    height: 40px;
+    width: 40px;
+    min-height: 40px;
+    min-width: 40px;      
+      border: 0;
+      border-radius: 56px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      outline: 0;
+      padding: 16px 21px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: all .3s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+
+}
+    .color-field:before {
+      background-color: initial;
+      background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+      border-radius: 125px;
+      content: "";
+      height: 50%;
+      left: 4%;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      transition: all .3s;
+      width: 92%;
+    }
+    
+    .color-field:hover {
+      box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+      transform: scale(1.05);
+    }
+    
+    @media (min-width: 768px) {
+      .color-field {
+        padding: 16px 48px;
+      }
+    }
+
+    .tools .button {    
+      align-self: center;
+      background-color: #fff;
+      background-image: none;
+      background-position: 0 90%;
+      background-repeat: repeat no-repeat;
+      background-size: 4px 3px;
+      border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+      border-style: solid;
+      border-width: 2px;
+      box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+      box-sizing: border-box;
+      color: #41403e;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Neucha, sans-serif;
+      font-size: 1rem;
+      line-height: 23px;
+      outline: none;
+      padding: .75rem;
+      text-decoration: none;
+      transition: all 235ms ease-in-out;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .button:hover {
+      box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+      transform: translate3d(0, 2px, 0);
+    }
+    
+    .button:focus {
+      box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+      
+    }
+
+.color-picker {
+      border-radius: 8px;
+      border-style: none;
+      box-sizing: border-box;
+        cursor: pointer;
+      display: inline-block;
+      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      height: 40px;
+      line-height: 20px;
+      list-style: none;
+      margin: 0;
+      outline: none;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: color 100ms;
+      vertical-align: baseline;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      top: 15px;
+      left: 5px;
+    }
+    
+    
+.pen-range {
+    align-self: center;
+    margin: 0 10px;
+}
+
+.result {
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+
+
+}
+
+form {
+  margin-top: 11px;
+}
+
+h2 {
+  font-size: 100px;
+  text-align: center;
+
+}
+
+.score {
+  align-self: center;
+  text-align: center;
+  margin-top: 1600px;
+  position: fixed;
+
+}
+
+.return {
+  margin-right: 1700px;
+}
+
+#pitbull {
+  width: 500px;
+}
+#rock {
+  width: 400px;
+}
+#kim {
+  width: 650px;
+}
